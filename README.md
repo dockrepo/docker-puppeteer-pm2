@@ -1,5 +1,5 @@
 # docker-puppeteer-pm2
 
 ```sh
-docker pull zyao89/docker-puppeteer-pm2
+docker pull zyao89/puppeteer-pm2
 ```
