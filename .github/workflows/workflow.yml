@@ -1,0 +1,20 @@
+name: Check update one month
+
+on:
+  schedule:
+    - cron: "0 0 1 1 * ?"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Check update
+        env:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+        run: |
+          docker version
+          docker login --username=$username --password=$password
+          ./build.sh
+        
