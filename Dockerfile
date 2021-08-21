@@ -2,7 +2,7 @@ FROM keymetrics/pm2:12-slim
 # FROM node:12-slim
 
 RUN apt-get update \
- && apt-get install -y \
+ && apt-get install -yq \
       gconf-service \
       libasound2 \
       libatk1.0-0 \
@@ -40,5 +40,6 @@ RUN apt-get update \
       libnss3 \
       lsb-release \
       xdg-utils \
-      wget
+      wget \
+      apt-transport-https git dumb-init python3 build-essential --no-install-recommends
 
