@@ -43,3 +43,7 @@ RUN apt-get update \
       wget \
       apt-transport-https git dumb-init python3 build-essential --no-install-recommends
 
+
+# fonts
+COPY ./fonts /usr/share/fonts/custom
+ENV CUSTOM_FONTS_ROOT=/usr/share/fonts/custom
