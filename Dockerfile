@@ -1,5 +1,6 @@
 FROM keymetrics/pm2:12-slim
 # FROM node:12-slim
+LABEL maintainer="Zyao89 <zyao89@gmail.com>"
 
 RUN apt-get update \
  && apt-get install -yq \
