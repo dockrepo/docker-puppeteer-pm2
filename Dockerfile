@@ -48,3 +48,7 @@ RUN apt-get update \
 # fonts
 COPY ./fonts /usr/share/fonts/custom
 ENV CUSTOM_FONTS_ROOT=/usr/share/fonts/custom
+
+# puppeteer
+# ENV PUPPETEER_SKIP_DOWNLOAD=true
+RUN npm install -g puppeteer --unsafe-perm=true --allow-root

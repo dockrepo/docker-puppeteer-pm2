@@ -15,6 +15,6 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
         run: |
           docker version
-          docker login --username=$username --password=$password
+          echo "${DOCKER_PASSWORD}" | docker login --username ${DOCKER_USERNAME} --password-stdin
           ./build.sh
         
